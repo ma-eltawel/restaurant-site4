@@ -1,0 +1,327 @@
+/* start global */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+:root{
+    --prim-col: #0e6253;
+    --sec-col: #ffc107;
+    --dark-col: #222;
+    --soft-green: #d9f2ee;
+    --grey-col: #f5f5f5;
+    --dark-grey: #a7a7a7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+/* end global */
+.landing{
+    display: flex;
+}
+/* start side bar */
+nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: var(--prim-col);
+    width: 250px;
+    height: 100%;
+    padding: 2%;
+    z-index: 4;
+}
+nav.active{
+    display: flex;
+}
+nav h1{
+    color: var(--sec-col);
+}
+nav .menu{
+    display: flex;
+    flex-direction: column;
+}
+nav .menu a, nav .logout a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+}
+nav .menu a:hover, nav .logout a:hover{
+    background-color: var(--sec-col);
+    border-radius: 50px;
+}
+nav .menu a i, nav .logout a i{
+    font-size: 20px;
+}
+nav .logout a{
+    color: var(--dark-grey);
+}
+nav .logout a:hover{
+    color: var(--dark-col);
+}
+/* end side bar */
+/* start main content */
+main{
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    background-color: var(--soft-green);
+    padding: 2%;
+    margin-left: 250px;
+}
+main .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .top .menu-but{
+    display: none;
+    color: var(--prim-col);
+    font-size: 20px;
+    background-color: white;
+    padding: 5px 8px;
+    height: 40px;
+    border-radius: 50%;
+}
+main .top .search{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+}
+main .top .search input{
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+}
+main .top .search input:hover{
+    box-shadow: 0 8px 24px rgb(149, 157, 165, 0.2);
+}
+main .top .search button{
+    width: 120px;
+    color: white;
+    background-color: var(--sec-col);
+    border-radius: 20px;
+    cursor: pointer;
+}
+main .top .search button:hover{
+    background-color: var(--prim-col);
+}
+main .top .icons{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+main .top .icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--prim-col);
+    font-size: 18px;   
+    background-color: white;
+    padding: 10px 8px;
+    border-radius: 50%;
+}
+main .top .icons a:hover{
+    box-shadow: 0 8px 24px rgb(149, 157, 165, 0.2);
+}
+main .recom{
+    background-color: var(--sec-col);
+    padding: 2%;
+    margin: 3% 0;
+    border-radius: 8px;
+}
+main .recom .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark-col);
+}
+main .recom .head h2{
+    font-size: 20px;
+}
+main .recom .head .arrow a{
+    color: var(--dark-col);
+    font-size: 24px;
+}
+main .recom .head .arrow a:hover{
+    color: var(--prim-col);
+}
+main .recom .wrapper{
+    display: flex;
+    gap: 1.5rem;
+    padding: 1%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+main .recom .wrapper .card{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 80%;
+    min-width: 200px;
+    height: 100%;
+    color: var(--prim-col);
+    background-color: var(--grey-col);
+    padding: 1%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+main .recom .wrapper .card:hover{
+    background-color: white;
+    box-shadow: 0 2px 8px rgb(176, 176, 176, 0.2);
+}
+main .recom .wrapper .card img{
+    width: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+main .recom .wrapper .card p{
+    color: var(--dark-col);
+    font-size: 14px;
+}
+main .container{
+    min-height: 100%;
+    background-color: var(--grey-col);
+    padding: 2%;
+    border-radius: 8px;
+}
+main .container .categories{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+main .container .categories .title .arrow a{
+    color: var(--dark-col);
+}
+main .container .categories .title .arrow a:hover{
+    color: var(--prim-col);
+}
+main .container .categories .wrapper{
+    display: flex;
+    gap: 1.2rem;
+    height: 100px;
+    overflow-x: hidden;
+}
+main .container .categories .wrapper .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 100%;
+    color: var(--dark-col);
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid var(--soft-green);
+    border-radius: 8px;
+    cursor: pointer;
+}
+main .container .categories .wrapper .card:hover{
+    color: white;
+    background-color: var(--prim-col);
+}
+main .container .categories .wrapper .card div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--prim-col);
+    font-size: 30px;
+    width: 80%;
+    height: 60%;
+    background-color: var(--soft-green);
+    border-radius: 8px;
+}
+main .container .categories .wrapper .card:hover div{
+    background-color: white;
+}
+main .container hr{
+    height: 1px;
+    background-color: var(--prim-col);
+    margin: 1rem 0;
+}
+main .container .details{
+    margin: 1rem 0 1.5rem;
+}
+main .container .details .wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2%;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+main .container .details .wrapper .card{
+    height: 100%;
+    min-height: 280px;
+    background-color: white;
+    margin: 1% 0;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgb(176, 176, 176, 0.2);
+}
+main .container .details .wrapper .card:hover{
+    box-shadow: 0 8px 24px rgb(149, 157, 165, 0.2);
+}
+main .container .details .wrapper .card img{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+main .container .details .wrapper .card:hover img{
+    filter: opacity(1);
+}
+main .container .details .wrapper .card .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+main .container .details .wrapper .card:hover .content h4{
+    color: var(--prim-col);
+}
+main .container .details .wrapper .card .content .title .desc{
+    color: var(--dark-grey);
+    font-size: 14px;
+    margin: 1% 0;
+    letter-spacing: 0.5;
+}
+main .container .details .wrapper .card .content .title .price{
+    color: var(--prim-col);
+}
+main .container .details .wrapper .card .content a{
+    color: var(--prim-col);
+    font-size: 22px;
+}
+/* end main content */
+/* start media queries */
+@media (max-width: 640px) {
+    nav{
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main .top .menu-but{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* end media queries */
